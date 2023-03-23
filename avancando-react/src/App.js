@@ -1,6 +1,7 @@
 import './App.css';
 
 import Paisagem from './assets/praia_02.jpg'
+import ManageData from './components/ManageData';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <h3>Imagem no diretorio assets</h3>
         <img src={ Paisagem } alt="paisagem" />
       </div>
+
+      <ManageData />
     </div>
   );
 }
