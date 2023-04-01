@@ -11,7 +11,7 @@ const ManageData = () => {
 
             <p>valor: {valor}</p>
             <button onClick={() => setValor(novoValor => ++novoValor)}>Mudar valor</button>
-            <h4>Quantidade: {parseInt(qtdProdutos)}</h4>
+            <h4>Quantidade: {qtdProdutos}</h4>
 
             <button className='mais' onClick={() => setQtdProdutos(somaProdutos => ++somaProdutos)}>
                 +
