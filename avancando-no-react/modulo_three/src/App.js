@@ -3,6 +3,7 @@ import ManageData from './components/ManageData';
 
 import piramide from './assets/foto.jpg'
 import ListRender from './components/ListRender';
+import ConditionalRender from './components/ConditionalRender';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <p>Imagem no diretório assets</p>
       <img src={piramide} alt="piramide" />
       <ManageData />
+      <ConditionalRender />
 
 
 
