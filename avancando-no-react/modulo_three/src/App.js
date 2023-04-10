@@ -5,7 +5,7 @@ import piramide from './assets/foto.jpg'
 import ListRender from './components/ListRender';
 import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
-import { useState } from 'react';
+import DestructuringInProps from './components/DestructuringInProps';
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
       <ConditionalRender />
       <ShowUserName nome='Alexandro' />
       <ShowUserName nome={name} />
-
+      <DestructuringInProps nome='Arthur' idade={ 25 } profissao={'Desenvolvedor'} />
 
 
     </div>
