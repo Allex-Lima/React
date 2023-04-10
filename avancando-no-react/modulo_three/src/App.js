@@ -4,8 +4,13 @@ import ManageData from './components/ManageData';
 import piramide from './assets/foto.jpg'
 import ListRender from './components/ListRender';
 import ConditionalRender from './components/ConditionalRender';
+import ShowUserName from './components/ShowUserName';
+import { useState } from 'react';
 
 function App() {
+
+  const name = 'Real Madri'
+
   return (
     <div className="App">
       <ListRender />
@@ -16,7 +21,8 @@ function App() {
       <img src={piramide} alt="piramide" />
       <ManageData />
       <ConditionalRender />
-
+      <ShowUserName nome='Alexandro' />
+      <ShowUserName nome={name} />
 
 
 
