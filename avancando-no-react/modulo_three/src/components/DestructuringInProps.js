@@ -1,7 +1,7 @@
-const DestructuringInProps = ({ nome, idade, profissao }) => {
+const DestructuringInProps = ({ nome, idade, profissao, titulo = 'Titulo Padrão'}) => {
     return (
         <div>
-            <h1>Destructuring In Props</h1>
+            <h1>{ titulo }</h1>
             <h5>
                 <ul>
                     <li>Nome: { nome }</li>

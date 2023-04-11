@@ -23,7 +23,10 @@ function App() {
       <ConditionalRender />
       <ShowUserName nome='Alexandro' />
       <ShowUserName nome={name} />
-      <DestructuringInProps nome='Arthur' idade={ 25 } profissao={'Desenvolvedor'} />
+      <DestructuringInProps titulo='Desestruturação em props' nome='Arthur' idade={25} profissao={'Desenvolvedor'} />
+      {/* Reutilização de componente DestructuringInProps */}
+      <DestructuringInProps titulo='Reutilização de Componentes' nome='júlia' idade={12} profissao='Estudante' />
+      <DestructuringInProps nome='Brown' idade={55} profissao='Escritor' />
 
 
     </div>
