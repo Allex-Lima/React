@@ -6,6 +6,7 @@ import ListRender from './components/ListRender';
 import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import DestructuringInProps from './components/DestructuringInProps';
+import Fragment from './components/Fragment';
 
 function App() {
 
@@ -43,6 +44,8 @@ function App() {
           profissao={pessoa.profissao}
         />
       )))}
+
+      <Fragment FragmentProps= 'Terceiro Título passado por props'/>
 
 
     </div>
