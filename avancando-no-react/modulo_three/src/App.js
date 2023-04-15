@@ -7,6 +7,7 @@ import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import DestructuringInProps from './components/DestructuringInProps';
 import Fragment from './components/Fragment';
+import Container from './components/Container';
 
 function App() {
 
@@ -45,7 +46,16 @@ function App() {
         />
       )))}
 
-      <Fragment FragmentProps= 'Terceiro Título passado por props'/>
+      <Fragment FragmentProps='Terceiro Título passado por props' />
+      <Container>
+        <p>Agora isso e impresso</p>
+        <p>Massa, gostei...</p>
+      </Container>
+
+      <Container propsChildren='Título passado por props'>
+        <p>Conteúdo do segundo Container.</p>
+      </Container>
+
 
 
     </div>
