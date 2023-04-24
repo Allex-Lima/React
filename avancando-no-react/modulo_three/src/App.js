@@ -8,17 +8,22 @@ import ShowUserName from './components/ShowUserName';
 import DestructuringInProps from './components/DestructuringInProps';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
+import ExcuteFunction from './components/ExeucteFunction';
 
 function App() {
 
   const name = 'Real Madri'
 
   const pessoas = [
-    { titulo: 'Reutilização com Loop', nome: 'Bárbara', idade: 34 ,profissao: 'recepcionista' },
-    { titulo: 'Reutilização com Loop', nome: 'Kátia',   idade: 21 ,profissao: 'assistente social' },
-    { titulo: 'Reutilização com Loop', nome: 'Bianca',  idade: 26 ,profissao:  'ti' },
-    { titulo: 'Reutilização com Loop', nome: 'Paula',   idade: 33 ,profissao:  'professora' },
+    { id: 1, titulo: 'Reutilização com Loop', nome: 'Bárbara', idade: 34 ,profissao: 'recepcionista' },
+    { id: 2, titulo: 'Reutilização com Loop', nome: 'Kátia',   idade: 21 ,profissao: 'assistente social' },
+    { id: 3, titulo: 'Reutilização com Loop', nome: 'Bianca',  idade: 26 ,profissao:  'ti' },
+    { id: 4, titulo: 'Reutilização com Loop', nome: 'Paula',   idade: 33 ,profissao:  'professora' },
   ]
+
+  const showMessage = () => {
+    console.log('Executa função via Props.')
+  }
 
   return (
     <div className="App">
@@ -39,6 +44,7 @@ function App() {
 
       {pessoas.map((pessoa => (
         <DestructuringInProps
+          key={pessoa.id}
           titulo={pessoa.titulo}
           nome={pessoa.nome}
           idade={pessoa.idade}
@@ -55,6 +61,8 @@ function App() {
       <Container propsChildren='Título passado por props'>
         <p>Conteúdo do segundo Container.</p>
       </Container>
+
+      <ExcuteFunction myFunction={ showMessage } />
 
 
 
