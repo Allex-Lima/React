@@ -9,6 +9,7 @@ import DestructuringInProps from './components/DestructuringInProps';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
 import ExcuteFunction from './components/ExeucteFunction';
+import UserDetails from './components/UserDetails';
 
 function App() {
 
@@ -25,6 +26,12 @@ function App() {
     console.log('Executa função via Props.')
   }
 
+  const person = [
+    { id: 1, nome: 'Alexandro', idade: 18, profissao: 'Desenvolvedor' },
+    { id: 2, nome: 'Sandro', idade: 15, profissao: 'Estudante' },
+    { id: 3, nome: 'Júlia', idade: 58, profissao: 'Médica' }
+  ]
+  console.log(person)
   return (
     <div className="App">
       <ListRender />
@@ -62,8 +69,16 @@ function App() {
         <p>Conteúdo do segundo Container.</p>
       </Container>
 
-      <ExcuteFunction myFunction={ showMessage } />
+      <ExcuteFunction myFunction={showMessage} />
 
+      {person.map((user) => (
+        <UserDetails
+          key={user.id}
+          nome={user.nome}
+          profissao={user.profissao}
+          idade={user.idade}
+        />
+      ))}
 
 
     </div>
