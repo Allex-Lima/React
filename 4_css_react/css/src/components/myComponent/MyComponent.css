@@ -1,0 +1,12 @@
+/* CSS Global */
+p {
+    color: green;
+    background-color: #000;
+}
+
+/* CSS de componentes */
+.my-comp-paragraph {
+    color: gold;
+    background-color: white;
+    font-size: 20px;
+}
