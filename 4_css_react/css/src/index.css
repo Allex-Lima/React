@@ -7,3 +7,15 @@ body {
 h1 {
   color: red;
 }
+
+.redTitle {
+  background-color: blueviolet;
+  color: white;
+  padding: 15px;
+  border: 2px solid seagreen;
+}
+
+.title {
+  background-color: black;
+  color: white;
+}
