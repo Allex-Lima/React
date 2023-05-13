@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './MyForm.css'
 
-const MyForm = () => {
+const MyForm = ({user}) => {
     // 3 - gerenciamento de dados
-    const [name, setName] = useState()
-    const [email, setEmail] = useState()
+    // 5 - controlled do input
+    const [name, setName] = useState(user ? user.name : "")
+    const [email, setEmail] = useState(user ? user.email : "")
 
     const handleName = (e) => {
         e.preventDefault()
@@ -18,6 +19,7 @@ const MyForm = () => {
         event.preventDefault()
         console.log("enviando formulário...");
         console.log(name);
+        setName(event.target.value)
         console.log(email);
     }
 
@@ -34,6 +36,7 @@ const MyForm = () => {
                         name="name"
                         placeholder="Digite seu nome"
                         onChange={handleName}
+                        value={name}
                     />
                 </div>
                 {/* 2 - label envolvendo o input */}
@@ -45,6 +48,7 @@ const MyForm = () => {
                         placeholder="Digite seu e-mail"
                         // 4 - alteração de state em inline
                         onChange={(e) => (setEmail(e.target.value))}
+                        value={email}
                     />
                 </label>
                 <input type="submit" value="Enviar" />
