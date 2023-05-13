@@ -11,6 +11,7 @@ const MyForm = () => {
         setName(e.target.value);
     }
     console.log(name);
+    console.log(email);
     return (
         <div>
             <h2>Formulário</h2>
@@ -28,10 +29,18 @@ const MyForm = () => {
                 {/* 2 - label envolvendo o input */}
                 <label>
                     <span>E-mail: </span>
-                    <input type="email" name="email" placeholder="Digite seu e-mail"/>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        // alteração de state em inline
+                        onChange={(e) => (setEmail(e.target.value))}
+                    />
                 </label>
                 <input type="submit" value="Enviar" />
             </form>
+            <p>Name: {name}</p>
+            <p>E-mail: {email}</p>
         </div>
     )
 }
