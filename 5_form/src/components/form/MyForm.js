@@ -8,7 +8,10 @@ const MyForm = ({user}) => {
     const [email, setEmail] = useState(user ? user.email : "")
 
     // textarea
-    const [bio, setBio] = useState("Programador")
+    const [bio, setBio] = useState("")
+
+    // select
+    const [role, setRole] = useState("")
 
     const handleName = (e) => {
         e.preventDefault()
@@ -24,11 +27,13 @@ const MyForm = ({user}) => {
         console.log(name);
         console.log(email);
         console.log(bio);
+        console.log(role);
 
         // 6 - limpando form
         setEmail("")
         setName("")
         setBio("")
+
     }
 
     return (
@@ -69,6 +74,19 @@ const MyForm = ({user}) => {
                     >
 
                     </textarea>
+                </label>
+
+                {/* select */}
+                <label>
+                    <span>Função no sistema</span>
+                    <select
+                        name="role"
+                        onChange={(e) => (setRole(e.target.value))}
+                    >
+                        <option value="usuário">Usuário</option>
+                        <option value="editor">Editor</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
                 </label>
                 <input type="submit" value="Enviar" />
             </form>
